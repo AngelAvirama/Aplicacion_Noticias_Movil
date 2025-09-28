@@ -11,14 +11,7 @@ class NewsProvider with ChangeNotifier {
   int _currentPage = 1;
   bool hasMorePages = true;
 
-  Future<void> loadNews({bool refresh = false}) async {
-    if (refresh) {
-      _currentPage = 1;
-      _newsList = [];
-      _filteredNews = [];
-      hasMorePages = true;
-    }
-
+  Future<void> loadNews() async {
     if (!hasMorePages || isLoading) return;
 
     isLoading = true;

@@ -54,8 +54,9 @@ class _NewsFormScreenState extends State<NewsFormScreen> {
               onSaved: (value) => category = value!,
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              child: Text('Guardar'),
+            ElevatedButton.icon(
+              icon: Icon(Icons.save),
+              label: Text('Guardar'),
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();

@@ -39,7 +39,6 @@ class NewsDetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Cabecera con categoría y título
             Container(
               width: double.infinity,
               color: Colors.indigo.shade50,
@@ -74,7 +73,6 @@ class NewsDetailScreen extends StatelessWidget {
               ),
             ),
 
-            // Cuerpo de la noticia
             Padding(
               padding: EdgeInsets.all(20),
               child: Text(
@@ -87,7 +85,6 @@ class NewsDetailScreen extends StatelessWidget {
               ),
             ),
 
-            // Botones de acción al final
             Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
