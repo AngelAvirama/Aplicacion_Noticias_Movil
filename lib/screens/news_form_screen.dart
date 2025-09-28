@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/news.dart';
 import '../providers/news_provider.dart';
-import 'news_detail_screen.dart';
 
 class NewsFormScreen extends StatefulWidget {
   final News? news;
@@ -75,12 +74,7 @@ class _NewsFormScreenState extends State<NewsFormScreen> {
                       duration: Duration(seconds: 2),
                     ),
                   );
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => NewsDetailScreen(news: newNews),
-                    ),
-                  );
+                  Navigator.pop(context);
                 }
               },
             )
